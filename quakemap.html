@@ -83,22 +83,27 @@
 
 //			Retrieves latest earthquake data from USGS - Commented lines retrieve it from OGS		    
 		    $.getJSON(
+		    // USGS Site:
 		    "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson",
-		    // OGS Site: "http://wichita.ogs.ou.edu/eq/catalog/past7days/past7days.json",
+		    // OGS Site: 
+		    // "http://wichita.ogs.ou.edu/eq/catalog/past7days/past7days.json",
 		    function(data) {
 				load7days(data);
 	    	});
 	    	
 		    $.getJSON(
+		    //USGS Site:
 		    "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson",
-		    // OGS Site: "http://wichita.ogs.ou.edu/eq/catalog/past30days/past30days.json", 
+		    // OGS Site: 
+		    // "http://wichita.ogs.ou.edu/eq/catalog/past30days/past30days.json", 
 		    function(data) {
 				load30days(data);
 			});
 			
 		    $.getJSON(
 		    "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson",
-		    // OGS Site: "http://wichita.ogs.ou.edu/eq/catalog/past24hours/past24hours.json", 
+		    // OGS Site: 
+		    // "http://wichita.ogs.ou.edu/eq/catalog/past24hours/past24hours.json", 
 		    function(data) {
 				load1day(data);
 		    });
